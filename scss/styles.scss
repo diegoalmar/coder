@@ -56,7 +56,7 @@ header{
 
 
 .cabecera{ /*caja contenedora de logo +menu*/
-    width: 82.5%;
+    width: 90%;
     height:70px;
     margin: auto;
     padding: 0%;
@@ -83,7 +83,7 @@ header{
 /*PRINCIPAL CARROUSEL ----*/
 
 #demo{
-    width: 80%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
     padding-top: 25px;
@@ -101,7 +101,7 @@ header{
 /*----LO ULTIMO ----*/
 
 .columnasContenedor{
-    width: 80%;
+    width: 90%;
     height:auto;
     box-sizing: border-box;
     margin-right: auto;
@@ -156,7 +156,7 @@ header{
 .flex1{
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    width: 90%;
     height: 365px;
     display:flex;
     flex-direction: row;
@@ -188,7 +188,7 @@ header{
 .flex2{
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    width: 90%;
     height: 600px;
     display:flex;
     flex-direction: row;
@@ -232,7 +232,7 @@ header{
 /*----FOOTER ----*/
 
 .contenedorFooter {
-    width: 80%;
+    width: 90%;
     height: 200px;
     margin-bottom: 0px;
     display: flex;
@@ -302,7 +302,7 @@ header{
     }
 }
 .creditos{
-    width: 80%;
+    width: 90%;
     height:70px;
     margin-left: auto;
     margin-right: auto;
@@ -406,7 +406,7 @@ a{
 }
 
 .separador{
-    width: 80%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
     .lineaGris{
@@ -507,6 +507,9 @@ a{
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-between;
+        .separador{
+            width: 100%;
+        }
         .block{
             width: auto;
             height: auto;
@@ -522,6 +525,33 @@ a{
                 border: none;
                 &__img{
                     width: 100%;
+                }
+            }
+           
+            .bloqueSm{
+                width: 100%;
+                height: 400px;
+                display: flex;
+                flex-direction:row;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin-bottom: 5px;
+                .card1{
+                    width: 50%;
+                    height: 33%;
+                    overflow: hidden;
+                    display:inline-flex;
+                    align-items: center;
+                    border-bottom: solid 1px  rgb(201, 201, 201);;
+                    padding-bottom: 8px ;
+                    margin-top: 0px;
+                    margin-bottom: 0%;
+                    &__img{
+                        height: 100%;
+                    }
+                    &__titulo{
+                        padding-left: 10px;
+                    }
                 }
             }
         }
