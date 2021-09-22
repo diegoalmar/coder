@@ -25,7 +25,7 @@ header {
 header .lineaNaranja {
   background-color: #eea509;
   width: 100%;
-  height: 5px;
+  height: 6px;
   z-index: 2000;
 }
 
@@ -496,6 +496,7 @@ a {
 }
 .galery .flex1 .block .card__img {
   width: 100%;
+  padding-bottom: 10px;
 }
 .galery .flex1 .block .bloqueSm {
   width: 100%;
