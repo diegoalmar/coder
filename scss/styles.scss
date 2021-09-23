@@ -404,6 +404,7 @@ p{
 a{
     text-decoration: none;   
 }
+img:hover {filter: grayscale(80%);}
 
 .separador{
     width: 90%;
@@ -423,7 +424,7 @@ a{
 .moda{
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    grid-template-rows: 0.070fr 0.30fr 2.5fr 1fr 0.30fr;
+    grid-template-rows: 0.070fr 0.20fr 2.5fr 0.5fr 0.30fr;
     grid-gap: 20px;
     grid-template-areas: 
     "header header header header"
@@ -491,11 +492,6 @@ a{
 
 }
 
-
-
-
-
-
 .galery{
     grid-area: last;
     height: auto;
@@ -527,6 +523,13 @@ a{
                     width: 100%;
                     padding-bottom: 10px;
                 }
+                h3{
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-weight:normal;
+                    font-size: 0.75rem;
+                    color:black;
+                    text-align:left;
+                }
             }
            
             .bloqueSm{
@@ -556,6 +559,11 @@ a{
                 }
             }
         }
+    }
+    .espaciopublicitario{
+        background-image:url(https://bluefm.com.ar/img/blue_1920.svg);
+        margin-left: 10%;
+        height: 1500px;
     }
     
 }
@@ -591,3 +599,410 @@ a{
 }
 
 
+/*-----------------------------------------------------PANTALLA IPAD--------------------------------------------------*/
+
+@media only screen and (max-width:768px) {
+    .mother{
+        grid-template-rows: 0.075fr 0.30fr 0.6fr 0.1fr 0.5fr 0.20fr;
+    }
+    #demo{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 25px;
+        .carousel-inner img {
+            width: 125%;
+            height: 100%;
+            }
+    }
+    .flex2{
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        height: auto;
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        .bloqueXl{
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            border-bottom: solid 1px  rgb(201, 201, 201);
+            padding-bottom: 10px;
+            &__img{
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+        .bloqueSm{
+            width: 100%;
+            height: 400px;
+            display: flex;
+            flex-direction:row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 5px;
+            .card1{
+                width: 50%;
+                height: 200px;
+                overflow: hidden;
+                display:inline-flex;
+                align-items: center;
+                border-bottom: solid 1px  rgb(201, 201, 201);;
+                padding-bottom: 5px ;
+                margin-top: 0px;
+                margin-bottom: 5px;
+                &__img{
+                    height: 100%;
+                }
+                &__titulo{
+                    padding-left: 10px;
+                }
+            }
+        }
+    } 
+    .moda{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: 0.070fr 0.30fr 2.5fr 0.25fr 0.30fr;
+        grid-gap: 20px;
+        grid-template-areas: 
+        "header header header header"
+        "principal principal principal principal"
+        "last last last last"
+        "wish wish wish publicidad"
+        "footer footer footer footer"
+    }   
+    .galery{
+        grid-area: last;
+        height: auto;
+        .flex1{
+            width: 90%;
+            margin-left: auto;
+            margin-left: auto;
+        }  
+    }
+    .galery2{
+        grid-area: wish;
+        height: 300px;
+        margin-left: 8%;
+        .multimedia{
+            width: auto;
+            margin-left: 0px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+    
+    .publicidad{
+        grid-area: publicidad;
+        width: 100%;
+        height: 100%;
+    }
+        
+}
+
+/*---------------------------------------------------PANTALLA IPHONE 6/7/8---------------------------------------------*/
+
+@media only screen and (max-width:380px){
+    .mother{
+        grid-template-rows: 0.025fr 0.10fr 0.8fr 0.2fr 0.4fr 0.15fr;
+        
+        #demo{
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 5px;
+            .carousel-inner img {
+                width: 125%;
+                height: 200%;          
+            }
+            .carousel-caption h1{
+                font-size: 1.5rem;
+                color: white;
+                text-shadow: 1px 1px 5px black;
+                z-index: 3;
+            }
+        }
+        .columnasContenedor{
+            width: 90%;
+            height:auto;
+            box-sizing: border-box;
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: stretch;
+            justify-content: space-between;
+            flex-basis: 100%;
+            .column1{
+                width: 100%;
+                flex-wrap: nowrap;
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+                flex-grow: 1;
+                margin-right: 15px;
+                .art__img--big{
+                    width: 120%;
+                }
+            }
+            .column2{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                flex-wrap:nowrap;
+                overflow: hidden;
+                margin-right: 15px;
+                justify-content: space-between;
+                .art__img{
+                    width: 100%;
+                }
+            }
+            .column3{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                flex-wrap: nowrap;
+                .art__img{
+                    width: 100%;
+                }
+            }
+        }
+        .flex1{
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+            height: auto;
+            display:flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .block{
+                width: 100%;
+                height: auto;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                .card{
+                    width: 100%;
+                    overflow: hidden;
+                    border: none;
+        
+                    &__img{
+                        width: 100%;
+                    }
+                }
+            
+            }
+        }
+        .flex2{
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+            height: auto;
+            display:flex;
+            flex-direction:row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .bloqueXl{
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                border-bottom: solid 1px  rgb(201, 201, 201);
+                &__img{
+                    width: 120%;
+                }
+            }
+            .bloqueSm{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .card1{
+                    width: 100%;
+                    height: 170px;
+                    overflow: hidden;
+                    display:inline-flex;
+                    align-items: center;
+                    border-bottom: solid 1px  rgb(201, 201, 201);;
+                    padding-bottom: 8px ;
+                    margin-top: 0px;
+                    &__img{
+                        height: 100%;
+                    }
+                    &__titulo{
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .contenedorFooter {
+        width: 90%;
+        height: 200px;
+        margin-bottom: 0px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction:column;
+        .logoFooter{
+            width:100%;
+            height:100%;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            &__img{
+                width: 100px;
+                height: 100px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        .social{
+            width:100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        .cajaMenu{
+
+            display: none;
+        }
+    }
+
+    .moda{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: 0.070fr 0.12fr 2.0fr 0.10fr 0.20fr 0.20fr;
+        grid-gap: 20px;
+        grid-template-areas: 
+        "header header header header"
+        "principal principal principal principal"
+        "last last last last"
+        "wish wish wish wish"
+        "publicidad publicidad publicidad publicidad"
+        "footer footer footer footer"
+    } 
+
+    .menuModa{
+        grid-area: principal;
+        .seccion{
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            height: 150px;
+            margin-top: 1px;
+            text-align: center;    
+            p{
+                text-align: center;
+                color: rgb(14, 10, 6);
+            }
+            h1{
+                text-align: center;
+                justify-content: center;
+                font-size: 50px;
+                font-weight: bolder;
+                text-transform: uppercase;
+            }
+        }
+        .nav_moda{
+            display: none;
+        }
+    
+    }
+    .galery{
+        grid-area: last;
+        height: auto;
+        .flex1{
+            width: 90%;
+            margin-left: auto;
+            height: auto;
+            display:flex;
+            flex-direction:row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .separador{
+                width: 100%;
+            }
+            .block{
+                width: auto;
+                height: auto;
+                overflow: hidden;
+                display: flex;
+                padding-bottom: 5px;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                .card{
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: row;
+                    overflow: hidden;
+                    border: none;
+                    &__thumbnail{
+                        width: 50%;
+                        &__img{
+                            width: 100%;
+                            overflow: hidden;
+                        }  
+                    }
+                    &__enlace{
+                        width: 60%;
+                        padding-left: 10px;
+                    }
+                    &__titulo{
+                        font-size:1.375rem;
+                        padding-left: 10px;
+                    }
+                   
+                    h3{
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-weight:normal;
+                        font-size: 0.75rem;
+                        color:black;
+                        text-align:left;
+                    }
+                }
+               
+                .bloqueSm{
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-direction:column;
+
+                    flex-wrap: wrap;
+                    margin-bottom: 5px;
+                    .card1{
+                        width: 100%;
+                        height: auto;
+                        overflow: hidden;
+                        display:flex;
+                        flex-direction: row;
+                        &__img{
+                            width:50%;
+                        }
+                        &__titulo{
+                            padding-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}  
